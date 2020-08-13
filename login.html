@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="C:\Users\Asus\Desktop\html folder\bootstrap\css\bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+    <script>
+        function login(){
+            var usr ,  psw ;
+            usr=document.getElementById("t1").value;
+            psw=document.getElementById("t2").value;
+            if(usr=="a@gmail.com"  &&  psw==12345){
+                window.location="thanks.html";
+            }
+            else{
+                alert("usr id psw is wrong")
+            }
+        }
+    </script>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+          </div>
+          <ul class="nav navbar-nav">
+         <li class="active"><a href="index.html">Home</a></li>
+          </ul>
+          <form class="navbar-form navbar-left" action="/action_page.php">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+     </nav>
+     <div class="box2">
+     <div class="login-box">
+         <h1>Login</h1>
+         <div class="textbox">
+             <i class="fa fa-user"></i>
+             <input type="text" placeholder="username" id="t1" required><br>
+             </div>
+             <div class="textbox">
+                 <i class="fa fa-lock"></i>
+                 <input type="password" placeholder="password" id="t2" required><br>
+                </div>
+    
+             <button type="button" class="btn2" onclick="login()">login</button>
+         </div>
+     </div>
+     <div></div>
+</body>
+</html>

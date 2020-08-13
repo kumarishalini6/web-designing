@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="C:\Users\Asus\Desktop\html folder\bootstrap\css\bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  <script>
+    function booknow(){
+        var firstname , lastname ,email,phone,address,select1,date1,date2,select2;
+        firstname=document.getElementById("fn").value;
+        lastname=document.getElementById("ln").value;
+        email=document.getElementById("em").value;
+        phone=document.getElementById("ph").value;
+        address=document.getElementById("add").value;
+        select1=document.getElementById("sel1").value;
+        date1=document.getElementById("da").value;
+        date2=document.getElementById("dd").value;
+        select2=document.getElementById("sel2").value;
+        if(email=="shalini7@gmail.com"  &&  phone==12345){
+            window.location="signup.html";
+        }
+        else{
+            alert("you are missing")
+        }
+    }
+  </script>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+          </div>
+          <ul class="nav navbar-nav">
+         <li class="active"><a href="index.html">Home</a></li>
+          </ul>
+          <form class="navbar-form navbar-left" action="/action_page.php">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+     </nav>
+
+       <div id="jumbotron" style="height: 700px;"> 
+       <h1 style="text-align: center;z-index: 1; font-weight: bolder; "> Online Booking Form</h1>
+         <form action="signup.html" method="POST"style=" background-color:blue; color:black; font-weight:bolder;font-size:15px; border:1px solid black; margin-left:25%;margin-right: 25%;padding:20px;text-align:center; z-index:1; " >
+         First Name:   <input type="text" id="fn" required><br><br>
+         Last Name:    <input type="text" id="ln" required><br><br>
+         E-mail:       <input type="email" id="em" required><br><br>
+         Phone Number: <input type="number" id="ph" required><br><br>
+         Address:      <input type="text" id="add" style="height: 50px;width: 250px;"><br><br> 
+         Types of room :
+         <select name="Types" id="sel1">
+            <option value="simple room ">simple room</option>
+            <option value="honeymoon sweets">honeymoon sweets</option>
+            <option value="room attached with galary">room attached with galary</option>
+            <option value="room attached with sweeming pool">room attached with sweeming pool</option>
+           </select><br><br><br>
+           Date of arrival:<input type="number" name="date" id="da" style="height: 25px; width: 50px;"> <input type="number" name="month" style="height: 25px; width: 50px;"> <input type="number" name="year" style="height: 25px; width: 50px;"><br><br>
+           Date of deperture:<input type="number" name="date" id="dd" style="height: 25px; width: 50px;"> <input type="number" name="month" style="height: 25px; width: 50px;"> <input type="number" name="year" style="height: 25px; width: 50px;"><br><br>
+         Arrival time:
+         <select name="time" id="sel2">
+             <option value="morning">morning</option>
+             <option value="evening">evening</option>
+             <option value="afternoon">afternoon</option>
+             <option value="neight">neight</option>
+            </select><br><br><br>
+            <button type="submit" onclick="booknow()" style="color: black; background-color: red; ">Book Now</button>
+        </form>
+       </div>
+
+    
+      
+</body>
+</html>
